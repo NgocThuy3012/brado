@@ -1,0 +1,46 @@
+.contact
+  .container
+    .row
+      .col-md-5.left-content
+        .section-heading
+          h1
+            em Contact
+            |  us
+        span
+          | Ask a question For us!
+        ul.menu-list
+          li
+            i.fa.fa-phone
+            div
+              div Mr. Brackman: 937.441.1933
+              div  MR. Do: 727.410.4441
+          li
+            i.fa.fa-envelope
+            div
+              div doug@brado-consulting.com
+              div  hugh@brado-consulting.com
+          li
+            i.fa.fa-home(aria-hidden='true')
+            | Lorem isprum untiled
+      .col-md-7
+        .container
+          form(id='contact hp-contact', action='', method='post')
+            .contact-form.row
+              .col-lg-12.col-md-12.col-sm-12
+                fieldset
+                  label(for='name1') Name
+                  input#name1.form-control(name='name1', type='text', required='')
+              .col-lg-12.col-md-12.col-sm-12
+                fieldset
+                  label(for='email1') Email
+                  input#email1.form-control(name='email1', type='text', pattern='[^ @]*@[^ @]*', required='')
+              .col-lg-12.col-md-12.col-sm-12
+                fieldset
+                  label(for='phone1') Phone
+                  input#phone1.form-control(name='phone1', type='number', required='')
+              .col-lg-12
+                fieldset
+                  label(for='message1') Your Message
+                  textarea#message1.form-control(name='message1', rows='6', required='')
+              .send
+                a.filled-button(href='') SEND

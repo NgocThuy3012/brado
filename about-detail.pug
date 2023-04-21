@@ -1,0 +1,110 @@
+include mixins
+
+doctype html
+html(lang="en")
+  head
+    include ./head
+    title Brado - About
+  body
+    // Preloader Start
+    #preloader
+      .jumper
+        div
+        div
+        div
+    // Preloader End
+    // Header
+    include ./header
+
+    header
+      nav.navbar.navbar-expand-lg
+        .container
+          a.navbar-brand(href='index.html')
+            img(src='./assets/images/logo.png', alt='')
+          button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+          #navbarResponsive.collapse.navbar-collapse
+            ul.navbar-nav.ml-auto
+              li.nav-item
+                a.nav-link(href='index.html') Home
+              li.nav-item.active
+                a.nav-link(href='about.html') About Us
+              li.nav-item
+                a.nav-link(href='services.html') Our Services
+                  i.fa.fa-angle-down(aria-hidden='true')
+              li.nav-item
+                a.nav-link(href='#') Our Project
+                  i.fa.fa-angle-down(aria-hidden='true')
+              li.nav-item
+                a.nav-link(href='blog.html') Blog
+                  i.fa.fa-angle-down(aria-hidden='true')
+              li.nav-item
+                a.nav-link(href='contact.html') Contact Us
+              li.nav-item.nav-item-search
+                a.nav-link(href='#')
+                  i.fa.fa-search(aria-hidden='true')
+
+    //Page Content
+
+    //Banner Starts Here
+    .page-heading(style='background-image: url(assets/images/about-banner.png);').header-text
+      .container
+        .row
+          .col-md-12
+            h1  our &nbsp;
+              em experts
+            span Lorem ipsum is just a dummy text
+    //Banner Ends Here
+
+
+
+    .more-info.more-info-about.about-detail
+      .container
+        .row
+          .col-md-12
+            .more-info-content
+              .row
+                .col-md-5
+                  .left-image
+                    img(src='assets/images/more-info.jpg', alt='')
+                .col-md-6.align-self-center
+                  .right-content
+                    .section-heading
+                      .line-top
+                      h1 Doug Brackman
+                      em  Co-Founder
+                    div
+                      | Mr. Brackman is the co-founder and managing partner of Brado Consulting.
+                    p He has a broad range of public and private finance and accounting experience across many highly-regulated industries, including Aerospace & Defense, industrial manufacturing, medical contract manufacturing, and several cannabis businesses. Mr. Brackman has led consulting engagements that have centered around small-to-mid size capital raises, turnaround & restructurings, and other various M&A processes with support.
+                      br
+                      |Prior to starting Brado Consulting, he began his career in investment banking, and then spent the following decade operating portfolio companies of private equity firms, including Avtron Aerospace, Pexco LLC, and Spectrum Plastics Group.
+                      br
+                      |Mr. Brackman received his Bachelor of Science degree in Accountancy from Miami University of Ohio.
+
+
+
+
+    include ./form-contact
+    include ./footer
+
+
+    // Bootstrap core JavaScript
+    script( src="vendor/jquery/jquery.min.js")
+    script( src="vendor/bootstrap/js/bootstrap.bundle.min.js")
+
+    // Additional Scripts
+    script( src="assets/js/custom.js")
+    script( src="assets/js/owl.js")
+    script( src="assets/js/slick.js")
+    script( src="assets/js/accordions.js")
+
+    script(language='text/javascript').
+      cleared[0] = cleared[1] = cleared[2] = 0;
+
+      function clearField(t) {
+        if (!cleared[t.id]) {
+          cleared[t.id] = 1;
+          t.value = '';
+          t.style.color = '#fff';
+        }
+      }

@@ -1,0 +1,42 @@
+footer
+  .container
+    .row
+      .col-md-3.footer-item
+        h4 Finance Business
+        p
+          | Vivamus tellus mi. Nulla ne cursus elit,vulputate. Sed ne cursus augue hasellus lacinia sapien vitae.
+        ul.social-icons
+          li
+            a(rel='nofollow', href='#', target='_blank')
+              img(src="assets/images/fb.png", alt="")
+          li
+            a(href='#')
+              img(src="assets/images/twitter.png", alt="")
+          li
+            a(href='#')
+              img(src="assets/images/in.png", alt="")
+          li
+            a(href='#')
+              img(src="assets/images/be.png", alt="")
+
+      +footerItem('Useful Links',{title:'Vivamus ut tellus mi', href:'#'},{title:'Nulla nec cursus elit', href:'#'},{title:'Vulputate sed nec', href:'#'},{title:'Cursus augue hasellus', href:'#'},{title:'Lacinia ac sapien', href:'#'})
+      +footerItem('Additional Pages',{title:'About Us', href:'about.html'},{title:'How We Work', href:'about.html'},{title:'Quick Support', href:'about.html'},{title:'Contact Us', href:'about.html'},{title:'Privacy Policy', href:'about.html'})
+
+      .col-md-3.footer-item.last-item
+        h4 Contact Us
+        .contact-form
+          form(id='contact footer-contact', action='', method='post')
+            .row
+              .col-lg-12.col-md-12.col-sm-12
+                fieldset
+                  input#name.form-control(name='name', type='text', placeholder='Full Name', required='')
+              .col-lg-12.col-md-12.col-sm-12
+                fieldset
+                  input#email.form-control(name='email', type='text', pattern='[^ @]*@[^ @]*', placeholder='E-Mail Address', required='')
+              .col-lg-12
+                fieldset
+                  textarea#message.form-control(name='message', rows='6', placeholder='Your Message', required='')
+              .col-lg-12
+                fieldset
+                  button#form-submit.filled-button(type='submit') Send Message
+

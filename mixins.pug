@@ -1,0 +1,89 @@
+mixin bannerItem(img, heading, content, _href, button)
+  div
+    .item(style=`background-image: url(${img})`)
+      .img-fill
+        .text-content
+          h6= heading
+          h4= content
+          a.filled-button(href=_href)= button
+
+
+mixin serviceItem(img, title, des)
+  .col-md-4
+    .service-item
+      img(src=img, alt='')
+      .down-content
+        h4= title
+        p= des
+        div
+          a.filled-button(href='') Read More
+
+
+mixin projectItem(img, title, des)
+  .project-item
+    img(src=img, alt='')
+    h4= title
+    div= des
+
+
+mixin partnerItem(logo)
+   div
+    .partner-item
+      div
+        img(src=logo, title='1', alt='1')
+
+
+
+mixin blogItem(img, title, des)
+  .col-md-3
+    .blog-item
+      img.blog-logo(src="assets/images/blog.png", alt="")
+      img(src=img, alt='')
+      .down-content
+        h4= title
+        p= des
+        .read-more
+          a(href='')
+            | Read More
+            svg(width='14', height='14', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
+              path(d='M7.17616 0.973877L6.07026 2.07978L10.4468 6.46416H0.90155V8.03281H10.4468L6.07026 12.4172L7.17616 13.5231L13.4508 7.24848L7.17616 0.973877Z', fill='#A4C639')
+
+
+mixin footerItem(title,...items)
+  .col-md-3.footer-item
+    h4=title
+    ul.menu-list
+      each item in items
+        li
+          a(href=item.href)= item.title
+        li
+
+
+
+mixin expertsItem(img, name, title, des)
+  .team-item
+    img(src=img, alt='')
+    .down-content
+      h4= name
+      span= title
+      p= des
+      .read-more
+          a(href='about-detail.html')
+            | Read More
+            svg(width='14', height='14', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
+              path(d='M7.17616 0.973877L6.07026 2.07978L10.4468 6.46416H0.90155V8.03281H10.4468L6.07026 12.4172L7.17616 13.5231L13.4508 7.24848L7.17616 0.973877Z', fill='#A4C639')
+
+
+mixin testimonialItem(img, name, title, des)
+  div
+    .testimonial-item
+      .inner-content
+        h4= name
+        span= title
+        p= des
+          | &quot;  &quot;
+        img(src=img, alt='')
+
+
+
+

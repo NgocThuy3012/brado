@@ -1,0 +1,181 @@
+include mixins
+
+doctype html
+html(lang="en")
+  head
+    include ./head
+    title Brado - About
+  body
+    // Preloader Start
+    #preloader
+      .jumper
+        div
+        div
+        div
+    // Preloader End
+    // Header
+    include ./header
+
+    header
+      nav.navbar.navbar-expand-lg
+        .container
+          a.navbar-brand(href='index.html')
+            img(src='./assets/images/logo.png', alt='')
+          button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+          #navbarResponsive.collapse.navbar-collapse
+            ul.navbar-nav.ml-auto
+              li.nav-item
+                a.nav-link(href='index.html') Home
+              li.nav-item.active
+                a.nav-link(href='about.html') About Us
+              li.nav-item
+                a.nav-link(href='services.html') Our Services
+                  i.fa.fa-angle-down(aria-hidden='true')
+              li.nav-item
+                a.nav-link(href='#') Our Project
+                  i.fa.fa-angle-down(aria-hidden='true')
+              li.nav-item
+                a.nav-link(href='blog.html') Blog
+                  i.fa.fa-angle-down(aria-hidden='true')
+              li.nav-item
+                a.nav-link(href='contact.html') Contact Us
+              li.nav-item.nav-item-search
+                a.nav-link(href='#')
+                  i.fa.fa-search(aria-hidden='true')
+
+    //Page Content
+
+    //Banner Starts Here
+    #top.main-banner.header-text
+      .Modern-Slider.banner-category
+        div
+          .item(style='background-image: url("assets/images/about-banner.png")')
+            .img-fill
+              .text-content
+                h6 Expert financial services for
+                h4 high-growth industries
+
+
+
+    .request-form
+      .container
+        .row
+          .col-md-8
+            h4 Request a call back right now ?
+            span It is a long established fact that a reader will be distracted by the readable
+          .col-md-4
+            a.border-button(href='contact.html') Contact Us
+    //Banner Ends Here
+
+
+
+    .more-info.more-info-about
+      .container
+        .row
+          .col-md-12
+            .more-info-content
+
+              .left-image.col-md-6
+                img(src='assets/images/more-info.jpg', alt='')
+                // <div class="col-md-1"></div>
+
+              //- .right-content
+
+              h2
+                | Our &nbsp;
+                em  company
+              span OUR SOLID BACKGROUND ON FINANCE
+              p
+                | Welcome to Brado Consulting, where we specialize in accounting and financial consulting for mid to large-sized companies. Our team of experienced professionals is committed to providing personalized service and expert guidance to help our clients achieve their financial goals.
+                br
+                br
+                | At Brado Consulting, we believe that our success is measured by our clients' success. That's why we work closely with each client to understand their unique needs and provide customized solutions that fit their business model. Whether it's external or internal financial statement audits, accounting and FP&A month-end close, restructuring, or accounting and FP&A process improvements, we're dedicated to delivering exceptional service and value.
+                | Our team is led by Doug Brackman & Hugh Do, seasoned accounting and finance professionals with over 25 years of combined experience. Our team's deep industry knowledge and commitment to customer service, makes Brado Consulting the ideal partner for businesses looking to streamline their financial operations and drive growth. At Brado Consulting, we take pride in our work and are dedicated to building long-lasting relationships with our clients. We believe in honesty, transparency, and accountability, and we strive to exceed our clients' expectations every step of the way. Thank you for considering Brado Consulting for your accounting and financial consulting needs.
+
+
+
+    // about team
+    .about-team
+      .about-team-content
+      .container
+        .row
+          .col-md-12
+            .content
+              p| Our team is led by Doug Brackman & Hugh Do, seasoned accounting and finance professionals with over 25 years of combined experience. Our team's deep industry knowledge and commitment to customer service, makes Brado Consulting the ideal partner for businesses looking to streamline their financial operations and drive growth.
+              br
+              p| At Brado Consulting, we take pride in our work and are dedicated to building long-lasting relationships with our clients. We believe in honesty, transparency, and accountability, and we strive to exceed our clients' expectations every step of the way. Thank you for considering Brado Consulting for your accounting and financial consulting needs.
+
+
+    //team
+    .team
+      .container
+        .row
+          .col-md-12
+            .section-heading
+              h1
+                | our &nbsp;
+                em experts
+              span Suspendisse a ante in neque iaculis lacinia
+          .col-md-12.list-team
+            +expertsItem('assets/images/team_03.jpg','Paul Walker','Financial Analyst','In sem sem, dapibus non lacus auctor, ornare sollicitudin lacus. Aliquam ipsum urna, semper quis.')
+            +expertsItem('assets/images/team_03.jpg','Paul Walker','Financial Analyst','In sem sem, dapibus non lacus auctor, ornare sollicitudin lacus. Aliquam ipsum urna, semper quis.')
+
+
+    //Mission Statement
+    .mission
+      .container
+        .row
+          .col-md-12
+            .mission-content
+              .section-heading
+                h2
+                  | Mission &nbsp;
+                  em Statement
+              p At Brado Consulting, our mission is to empower high-growth industries through strategic financial consulting and innovative solutions. We believe in the transformative power of entrepreneurship and the importance of fostering economic growth through sustainable and profitable business practices.
+              p By partnering with our clients in the technology, healthcare, and emerging markets, we aim to create impactful change and drive success at every stage of their growth journey. Our commitment to exceptional service, uncompromising integrity, and unparalleled expertise enables us to deliver results that exceed expectations and drive long-term value for our clients, partners, and communities.
+            .mission-bg
+
+
+    //What they say about us
+    .testimonials
+      .container
+        .row
+          .col-md-12
+            .section-heading
+              h2
+                | What they say &nbsp;
+                em about us
+              span testimonials from our greatest clients
+          .col-md-12
+            .testimonials-slider
+              +testimonialItem('http://placehold.it/60x60','George Walker','Chief Financial Analyst','&quot;Nulla ullamcorper, ipsum vel condimentum congue, mi odio vehicula tellus, sit amet malesuada justo sem sit amet quam. Pellentesque in sagittis lacus.&quot;')
+              +testimonialItem('http://placehold.it/60x60','George Walker','Chief Financial Analyst','&quot;Nulla ullamcorper, ipsum vel condimentum congue, mi odio vehicula tellus, sit amet malesuada justo sem sit amet quam. Pellentesque in sagittis lacus.&quot;')
+              +testimonialItem('http://placehold.it/60x60','George Walker','Chief Financial Analyst','&quot;Nulla ullamcorper, ipsum vel condimentum congue, mi odio vehicula tellus, sit amet malesuada justo sem sit amet quam. Pellentesque in sagittis lacus.&quot;')
+              +testimonialItem('http://placehold.it/60x60','George Walker','Chief Financial Analyst','&quot;Nulla ullamcorper, ipsum vel condimentum congue, mi odio vehicula tellus, sit amet malesuada justo sem sit amet quam. Pellentesque in sagittis lacus.&quot;')
+
+
+    include ./form-contact
+    include ./footer
+
+
+    // Bootstrap core JavaScript
+    script( src="vendor/jquery/jquery.min.js")
+    script( src="vendor/bootstrap/js/bootstrap.bundle.min.js")
+
+    // Additional Scripts
+    script( src="assets/js/custom.js")
+    script( src="assets/js/owl.js")
+    script( src="assets/js/slick.js")
+    script( src="assets/js/accordions.js")
+
+    script(language='text/javascript').
+      cleared[0] = cleared[1] = cleared[2] = 0;
+
+      function clearField(t) {
+        if (!cleared[t.id]) {
+          cleared[t.id] = 1;
+          t.value = '';
+          t.style.color = '#fff';
+        }
+      }

@@ -1,0 +1,153 @@
+include mixins
+
+doctype html
+html(lang="en")
+  head
+    include ./head
+    title Brado - About
+  body
+    // Preloader Start
+    #preloader
+      .jumper
+        div
+        div
+        div
+    // Preloader End
+    // Header
+    include ./header
+
+    header
+      nav.navbar.navbar-expand-lg
+        .container
+          a.navbar-brand(href='index.html')
+            img(src='./assets/images/logo.png', alt='')
+          button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+          #navbarResponsive.collapse.navbar-collapse
+            ul.navbar-nav.ml-auto
+
+              li.nav-item.nav-item-search
+                a.nav-link(href='#')
+                  i.fa.fa-search(aria-hidden='true')li.nav-item
+                a.nav-link(href='index.html') Home
+              li.nav-item
+                a.nav-link(href='about.html') About Us
+              li.nav-item
+                a.nav-link(href='services.html') Our Services
+                  i.fa.fa-angle-down(aria-hidden='true')
+              li.nav-item
+                a.nav-link(href='#') Our Project
+                  i.fa.fa-angle-down(aria-hidden='true')
+              li.nav-item
+                a.nav-link(href='blog.html') Blog
+                  i.fa.fa-angle-down(aria-hidden='true')
+              li.nav-item.active
+                a.nav-link(href='contact.html') Contact Us
+              li.nav-item.nav-item-search
+                a.nav-link(href='#')
+                  i.fa.fa-search(aria-hidden='true')
+
+    //Page Content
+
+    //Banner Starts Here
+    .page-heading(style='background-image: url(assets/images/contact-banner.png);').header-text
+      .container
+        .row
+          .col-md-12
+            h1
+              em Contact Us
+            span FEEL FREE TO SEND US A MESSAGE NOW!
+    //Banner Ends Here
+
+    .contact-information
+      .container
+        .row
+          .col-md-4
+            .contact-item
+              i.fa.fa-phone
+              h4 Phone
+              p Vivamus ut tellus mi. Nulla nec cursus elit, id vulputate nec cursus augue.
+              a(href='#') MR. Do: 727.410.4441
+              a(href='') Mr. Brackman: 937.441.1933
+          .col-md-4
+            .contact-item
+              i.fa.fa-envelope
+              h4 Email
+              p Vivamus ut tellus mi. Nulla nec cursus elit, id vulputate nec cursus augue.
+              a(href='#') info@company.com
+          .col-md-4
+            .contact-item
+              i.fa.fa-map-marker
+              h4 Location
+              p
+                | 1020 New Mountain Street
+                br
+                | Forest Park, FP 11220
+              a(href='#') View on Google Maps
+
+
+    .callback-form.contact-us.send-message
+      .container
+        .row
+          .col-md-12
+            .section-heading
+              h2
+                | Send us a
+                em message
+              span Suspendisse a ante in neque iaculis lacinia
+          .col-md-12
+            .contact-form
+              form#contact(action='', method='get')
+                .row
+                  .col-lg-4.col-md-12.col-sm-12
+                    fieldset
+                      input#name.form-control(name='name', type='text', placeholder='Full Name', required='')
+                  .col-lg-4.col-md-12.col-sm-12
+                    fieldset
+                      input#email.form-control(name='email', type='text', pattern='[^ @]*@[^ @]*', placeholder='E-Mail Address', required='')
+                  .col-lg-4.col-md-12.col-sm-12
+                    fieldset
+                      input#subject.form-control(name='subject', type='text', placeholder='Subject', required='')
+                  .col-lg-12
+                    fieldset
+                      textarea#message.form-control(name='message', rows='6', placeholder='Your Message', required='')
+            div
+              fieldset(style='display: flex;')
+                button#form-submit.filled-button(type='submit') Send Message
+
+
+    .partners.contact-partners
+      .container
+        .row
+          .col-md-12
+            .owl-partners.owl-carousel
+              .partner-item
+                img(src='assets/images/client-01.png', alt='')
+
+
+
+
+
+    include ./footer
+
+
+    // Bootstrap core JavaScript
+    script( src="vendor/jquery/jquery.min.js")
+    script( src="vendor/bootstrap/js/bootstrap.bundle.min.js")
+
+    // Additional Scripts
+    script( src="assets/js/custom.js")
+    script( src="assets/js/owl.js")
+    script( src="assets/js/slick.js")
+    script( src="assets/js/accordions.js")
+
+    script(language='text/javascript').
+      cleared[0] = cleared[1] = cleared[2] = 0;
+
+      function clearField(t) {
+        if (!cleared[t.id]) {
+          cleared[t.id] = 1;
+          t.value = '';
+          t.style.color = '#fff';
+        }
+      }

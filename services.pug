@@ -1,0 +1,126 @@
+include mixins
+
+doctype html
+html(lang="en")
+  head
+    include ./head
+    title Brado - Our Services
+  body
+    // Preloader Start
+    #preloader
+      .jumper
+        div
+        div
+        div
+    // Preloader End
+    // Header
+    include ./header
+
+    header
+      nav.navbar.navbar-expand-lg
+        .container
+          a.navbar-brand(href='index.html')
+            img(src='./assets/images/logo.png', alt='')
+          button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+          #navbarResponsive.collapse.navbar-collapse
+            ul.navbar-nav.ml-auto
+              ul.navbar-nav.ml-auto
+              li.nav-item
+                a.nav-link(href='index.html') Home
+              li.nav-item
+                a.nav-link(href='about.html') About Us
+              li.nav-item.active
+                a.nav-link(href='services.html') Our Services
+                  i.fa.fa-angle-down(aria-hidden='true')
+              li.nav-item
+                a.nav-link(href='#') Our Project
+                  i.fa.fa-angle-down(aria-hidden='true')
+              li.nav-item
+                a.nav-link(href='blog.html') Blog
+                  i.fa.fa-angle-down(aria-hidden='true')
+              li.nav-item
+                a.nav-link(href='contact.html') Contact Us
+              li.nav-item.nav-item-search
+                a.nav-link(href='#')
+                  i.fa.fa-search(aria-hidden='true')
+
+    //Page Content
+
+    //Banner Starts Here
+    #tabs
+      .page-heading(style='background-image: url(assets/images/service-banner.png);').header-text
+        .container
+          .row
+            .col-md-12
+              h1  our &nbsp;
+                em  services
+              span Lorem ipsum is just a dummy text
+            .col-md-12
+              ul
+                li
+                  a(href='#tabs-1')
+                    | Experienced Financial Consultants
+                li
+                  a(href='#tabs-2')
+                    | Dedicated Accounting Support
+      //Banner Ends Here
+      .single-services
+        .container
+          .row
+            .col-md-12
+              section.tabs-content
+                article#tabs-1
+                  .row
+                    +serviceItem('assets/images/service_01.jpg','Cash Utilization and Forecasting','It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.')
+                    +serviceItem('assets/images/service_02.jpg','Cost Reduction Initiatives and Analysis','It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.')
+                    +serviceItem('assets/images/service_03.jpg','Debt Managemen','It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.')
+                    +serviceItem('assets/images/service_01.jpg','Cash Utilization and Forecasting','It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.')
+                    +serviceItem('assets/images/service_02.jpg','Cost Reduction Initiatives and Analysis','It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.')
+                    +serviceItem('assets/images/service_03.jpg','Debt Managemen','It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.')
+                    +serviceItem('assets/images/service_01.jpg','Cash Utilization and Forecasting','It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.')
+                    +serviceItem('assets/images/service_02.jpg','Cost Reduction Initiatives and Analysis','It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.')
+                    +serviceItem('assets/images/service_03.jpg','Debt Managemen','It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.')
+                    +serviceItem('assets/images/service_01.jpg','Cash Utilization and Forecasting','It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.')
+                    +serviceItem('assets/images/service_02.jpg','Cost Reduction Initiatives and Analysis','It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.')
+                    +serviceItem('assets/images/service_03.jpg','Debt Managemen','It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.')
+                article#tabs-2
+                  .row
+                    +serviceItem('assets/images/service_01.jpg','Cash Utilization and Forecasting','It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.')
+                    +serviceItem('assets/images/service_02.jpg','Cost Reduction Initiatives and Analysis','It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.')
+                    +serviceItem('assets/images/service_03.jpg','Debt Managemen','It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.')
+                    +serviceItem('assets/images/service_01.jpg','Cash Utilization and Forecasting','It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.')
+                    +serviceItem('assets/images/service_02.jpg','Cost Reduction Initiatives and Analysis','It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.')
+                    +serviceItem('assets/images/service_03.jpg','Debt Managemen','It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.')
+                    +serviceItem('assets/images/service_01.jpg','Cash Utilization and Forecasting','It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.')
+                    +serviceItem('assets/images/service_02.jpg','Cost Reduction Initiatives and Analysis','It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.')
+                    +serviceItem('assets/images/service_03.jpg','Debt Managemen','It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.')
+                    +serviceItem('assets/images/service_01.jpg','Cash Utilization and Forecasting','It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.')
+                    +serviceItem('assets/images/service_02.jpg','Cost Reduction Initiatives and Analysis','It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.')
+                    +serviceItem('assets/images/service_03.jpg','Debt Managemen','It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.')
+
+
+    include ./form-contact
+    include ./footer
+
+
+    // Bootstrap core JavaScript
+    script( src="vendor/jquery/jquery.min.js")
+    script( src="vendor/bootstrap/js/bootstrap.bundle.min.js")
+
+    // Additional Scripts
+    script( src="assets/js/custom.js")
+    script( src="assets/js/owl.js")
+    script( src="assets/js/slick.js")
+    script( src="assets/js/accordions.js")
+
+    script(language='text/javascript').
+      cleared[0] = cleared[1] = cleared[2] = 0;
+
+      function clearField(t) {
+        if (!cleared[t.id]) {
+          cleared[t.id] = 1;
+          t.value = '';
+          t.style.color = '#fff';
+        }
+      }

@@ -1,0 +1,212 @@
+include mixins
+
+doctype html
+html(lang="en")
+  head
+    include ./head
+    title Brado
+  body
+    // Preloader Start
+    #preloader
+      .jumper
+        div
+        div
+        div
+    // Preloader End
+    // Header
+    include ./header
+
+    header
+      nav.navbar.navbar-expand-lg
+        .container
+          a.navbar-brand(href='index.html')
+            img(src='./assets/images/logo.png', alt='')
+          button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+          #navbarResponsive.collapse.navbar-collapse
+            ul.navbar-nav.ml-auto
+              li.nav-item.active
+                a.nav-link(href='index.html') Home
+              li.nav-item
+                a.nav-link(href='about.html') About Us
+              li.nav-item
+                a.nav-link(href='services.html') Our Services
+                  i.fa.fa-angle-down(aria-hidden='true')
+              li.nav-item
+                a.nav-link(href='#') Our Project
+                  i.fa.fa-angle-down(aria-hidden='true')
+              li.nav-item
+                a.nav-link(href='blog.html') Blog
+                  i.fa.fa-angle-down(aria-hidden='true')
+              li.nav-item
+                a.nav-link(href='contact.html') Contact Us
+              li.nav-item.nav-item-search
+                a.nav-link(href='#')
+                  i.fa.fa-search(aria-hidden='true')
+
+    //Page Content
+
+    //Banner Starts Here
+    #top.main-banner.header-text
+      .Modern-Slider
+        // Item
+        +bannerItem('assets/images/slide_01.jpg', 'we are ready to help you','Financial Analysis & Consulting','contact.html','contact us')
+        +bannerItem('assets/images/slide_02.jpg', 'we are here to support you','Accounting & Management','services.html','our services')
+        +bannerItem('assets/images/slide_03.jpg', 'we have a solid background','Market Analysis & Statistics','about.html','learn more')
+        +bannerItem('assets/images/slide_04.jpg', 'Expert financial services for','high-growth industries','about.html','ABOUT US')
+        // // Item
+
+
+    .request-form
+      .container
+        .row
+          .col-md-8
+            h4 Request a call back right now ?
+            span It is a long established fact that a reader will be distracted by the readable
+          .col-md-4
+            a.border-button(href='contact.html') Contact Us
+    //Banner Ends Here
+
+
+    //Services
+    .services
+      .container
+        .row
+          .col-md-12
+            .section-heading
+              h1
+                | Financial &nbsp;
+                em Services
+              span It is a long established fact that a reader will be distracted
+          .col-md-12
+            .row.service-session
+              .col-md-12.session-header
+                .section-heading
+                  h2
+                    | Experienced Financial &nbsp;
+                    em Consultants
+              .container
+                .col-md-12.services-slider
+                  +serviceItem('assets/images/service_01.jpg','Cash Utilization and Forecasting','It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.')
+                  +serviceItem('assets/images/service_02.jpg','Cost Reduction Initiatives and Analysis','It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.')
+                  +serviceItem('assets/images/service_03.jpg','Debt Managemen','It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.')
+
+    .services.services2
+      .container
+        .row
+          .col-md-12
+            .row.service-session
+              .col-md-12.session-header
+                .section-heading
+                  h2
+                    | Experienced Financial &nbsp;
+                    em Consultants
+              .container
+                .col-md-12.services-slider
+                  +serviceItem('assets/images/service_01.jpg','Month End Close & Reconciliations','It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.')
+                  +serviceItem('assets/images/service_02.jpg','Financial Statement Preparation','It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.')
+                  +serviceItem('assets/images/service_03.jpg','Historical financial records cleanup','It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.')
+    //Services end
+
+
+    .projects
+      .container
+        .row
+          .col-md-12
+            .section-heading
+              .line-top
+              h1
+                | Our &nbsp;
+                em Projects
+          .container
+            .col-md-12.project-slider
+              +projectItem('./assets//images/project1.png','ABC','Debt Management')
+              +projectItem('./assets//images/project2.png','Dolor','Financial Statement Preparation')
+              +projectItem('./assets//images/project3.png','Ipsum Dolor','Financial Statement Preparation')
+              +projectItem('./assets//images/project4.png','Lorem','Debt Management Financial Statement Preparation')
+              +projectItem('./assets//images/project2.png','Dolor','Financial Statement Preparation')
+
+
+    .more-info
+      .container
+        .row
+          .col-md-12
+            .more-info-content
+              .row
+                .col-md-6
+                  .left-image
+                    img(src='assets/images/more-info.jpg', alt='')
+                .col-md-5.align-self-center
+                  .right-content
+                    span Who we are
+                    h2
+                      | Get to know about
+                      br
+                      em our company
+                    p
+                      | Pellentesque ultrices at turpis in vestibulum. Aenean pretium elit nec congue elementum. Nulla
+                      | luctus laoreet porta. Maecenas at nisi tempus, porta metus vitae, faucibus augue.
+                      br
+                      br
+                      | Fusce et venenatis ex. Quisque varius, velit quis dictum sagittis, odio velit molestie nunc, ut posuere ante tortor ut neque.
+                    a.filled-button(href='#') Read More
+
+    .partners
+      .container
+        .row
+          .col-md-12.session-header
+            .section-heading
+              .line-top
+              h2
+                | Our &nbsp;
+                em Customers
+          .container
+            .col-md-12.partners-slider
+              +partnerItem('assets/images/customer.png')
+              +partnerItem('assets/images/customer.png')
+              +partnerItem('assets/images/customer.png')
+              +partnerItem('assets/images/customer.png')
+              +partnerItem('assets/images/customer.png')
+              +partnerItem('assets/images/customer.png')
+
+
+    .blog
+      .container
+        .row
+          .col-md-12
+            .section-heading
+              h1
+                em BLOG
+          +blogItem('assets/images/service_02.jpg', 'Financial Statement Preparation','It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.')
+          +blogItem('assets/images/service_02.jpg', 'Financial Statement Preparation','It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.')
+          +blogItem('assets/images/service_02.jpg', 'Financial Statement Preparation','It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.')
+          +blogItem('assets/images/service_02.jpg', 'Financial Statement Preparation','It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.')
+
+        .col-md-12.view-more
+          a.filled-button(href='') VIEW more
+
+
+    include ./form-contact
+    include ./footer
+
+
+    // Bootstrap core JavaScript
+    script( src="vendor/jquery/jquery.min.js")
+    script( src="vendor/bootstrap/js/bootstrap.bundle.min.js")
+
+    // Additional Scripts
+    script( src="assets/js/custom.js")
+    script( src="assets/js/owl.js")
+    script( src="assets/js/slick.js")
+    script( src="assets/js/accordions.js")
+
+    script(language='text/javascript').
+      cleared[0] = cleared[1] = cleared[2] = 0;
+
+      function clearField(t) {
+        if (!cleared[t.id]) {
+          cleared[t.id] = 1;
+          t.value = '';
+          t.style.color = '#fff';
+        }
+      }
