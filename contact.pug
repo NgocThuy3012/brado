@@ -4,7 +4,7 @@ doctype html
 html(lang="en")
   head
     include ./head
-    title Brado - About
+    title Brado - Contact Us
   body
     // Preloader Start
     #preloader
@@ -25,10 +25,7 @@ html(lang="en")
             span.navbar-toggler-icon
           #navbarResponsive.collapse.navbar-collapse
             ul.navbar-nav.ml-auto
-
-              li.nav-item.nav-item-search
-                a.nav-link(href='#')
-                  i.fa.fa-search(aria-hidden='true')li.nav-item
+              li.nav-item
                 a.nav-link(href='index.html') Home
               li.nav-item
                 a.nav-link(href='about.html') About Us
@@ -61,7 +58,7 @@ html(lang="en")
 
     .contact-information
       .container
-        .row
+        .row.contact-main
           .col-md-4
             .contact-item
               i.fa.fa-phone
@@ -75,15 +72,7 @@ html(lang="en")
               h4 Email
               p Vivamus ut tellus mi. Nulla nec cursus elit, id vulputate nec cursus augue.
               a(href='#') info@company.com
-          .col-md-4
-            .contact-item
-              i.fa.fa-map-marker
-              h4 Location
-              p
-                | 1020 New Mountain Street
-                br
-                | Forest Park, FP 11220
-              a(href='#') View on Google Maps
+              a(href='#') info@company.com
 
 
     .callback-form.contact-us.send-message
@@ -95,34 +84,41 @@ html(lang="en")
                 | Send us a
                 em message
               span Suspendisse a ante in neque iaculis lacinia
-          .col-md-12
-            .contact-form
-              form#contact(action='', method='get')
-                .row
-                  .col-lg-4.col-md-12.col-sm-12
-                    fieldset
-                      input#name.form-control(name='name', type='text', placeholder='Full Name', required='')
-                  .col-lg-4.col-md-12.col-sm-12
-                    fieldset
-                      input#email.form-control(name='email', type='text', pattern='[^ @]*@[^ @]*', placeholder='E-Mail Address', required='')
-                  .col-lg-4.col-md-12.col-sm-12
-                    fieldset
-                      input#subject.form-control(name='subject', type='text', placeholder='Subject', required='')
-                  .col-lg-12
-                    fieldset
-                      textarea#message.form-control(name='message', rows='6', placeholder='Your Message', required='')
-            div
-              fieldset(style='display: flex;')
-                button#form-submit.filled-button(type='submit') Send Message
+          .col-md-12.contact
+            .container
+              .row
+                .col-md-6
+                  form(id='contact hp-contact', action='', method='post')
+                    .contact-form
+                      .container
+                        .row
+                          .col-lg-12.col-md-12.col-sm-12
+                            fieldset
+                              label(for='service') Choose service
+                              select(id='service' name='service')
+                                option(value='')
+                              //- input#name1.form-control(name='name1', type='selected', required='')
+                          .col-lg-12.col-md-12.col-sm-12
+                            fieldset
+                              label(for='name1') Name
+                              input#name1.form-control(name='name1', type='text', required='')
+                          .col-lg-12.col-md-12.col-sm-12
+                            fieldset
+                              label(for='email1') Email
+                              input#email1.form-control(name='email1', type='text', pattern='[^ @]*@[^ @]*', required='')
+                          .col-lg-12.col-md-12.col-sm-12
+                            fieldset
+                              label(for='phone1') Phone
+                              input#phone1.form-control(name='phone1', type='number', required='')
+                          .col-lg-12
+                            fieldset
+                              label(for='message1') Your Message
+                              textarea#message1.form-control(name='message1', rows='6', required='')
+                          .send
+                            fieldset(style='display: flex;')
+                              button#form-submit.filled-button(type='submit') Send Message
 
 
-    .partners.contact-partners
-      .container
-        .row
-          .col-md-12
-            .owl-partners.owl-carousel
-              .partner-item
-                img(src='assets/images/client-01.png', alt='')
 
 
 
