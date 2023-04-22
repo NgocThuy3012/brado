@@ -10,27 +10,31 @@ mixin bannerItem(img, heading, content, _href, button)
 
 mixin serviceItem(img, title, des)
   .col-md-4
-    .service-item
-      img(src=img, alt='')
-      .down-content
-        h4= title
-        p= des
-        div
-          a.filled-button(href='') Read More
+    .service-item-main
+      .service-item
+        img(src=img, alt='')
+        .down-content
+          h4= title
+          p= des
+          div
+            a.filled-button(href='') Read More
 
 
 mixin projectItem(img, title, des)
-  .project-item
-    img(src=img, alt='')
-    h4= title
-    div= des
+  .col-md-3
+    .project-item-main
+      .project-item
+        img(src=img, alt='')
+        h4= title
+        div= des
 
 
 mixin partnerItem(logo)
-   div
-    .partner-item
-      div
-        img(src=logo, title='1', alt='1')
+  div
+    .partner-item-main
+      .partner-item
+        div
+          img(src=logo, title='1', alt='1')
 
 
 

@@ -478,6 +478,7 @@ header .navbar {
 .Modern-Slider ul.slick-dots li.slick-active,
 .projects ul.slick-dots li.slick-active,
 .partners ul.slick-dots li.slick-active,
+.services ul.slick-dots li.slick-active,
 .testimonials ul.slick-dots li.slick-active {
   width: 24px !important;
 }
@@ -485,6 +486,7 @@ header .navbar {
 .Modern-Slider ul.slick-dots li.slick-active button,
 .projects ul.slick-dots li.slick-active button,
 .partners ul.slick-dots li.slick-active button,
+.services ul.slick-dots li.slick-active button,
 .testimonials ul.slick-dots li.slick-active button {
   background: rgba(217, 217, 217, 0.75);
   border: none;
@@ -494,6 +496,7 @@ header .navbar {
 .Modern-Slider ul.slick-dots li,
 .projects ul.slick-dots li,
 .partners ul.slick-dots li,
+.services ul.slick-dots li,
 .testimonials ul.slick-dots li {
   width: 10px;
   height: 10px;
@@ -503,6 +506,7 @@ header .navbar {
 .Modern-Slider .slick-dots button,
 .projects .slick-dots button,
 .partners .slick-dots button,
+.services .slick-dots button,
 .testimonials .slick-dots button {
   width: 10px;
   height: 5px;
@@ -517,6 +521,7 @@ header .navbar {
 .Modern-Slider .slick-dots button:focus,
 .projects .slick-dots button:focus,
 .partners .slick-dots button:focus,
+.services .slick-dots button:focus,
 .testimonials .slick-dots button:focus {
   outline: none;
 }
@@ -684,17 +689,19 @@ header .navbar {
 
 .services {
   margin-top: 80px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .services2 {
   background: #f5f5f5;
   padding-top: 50px;
   padding-bottom: 10px;
-  margin-top: 0px !important;
+  margin-top: 10px !important;
 }
 
 .service-session {
-  padding-bottom: 59px;
+  padding-bottom: 65px;
 }
 
 .session-header {
@@ -721,8 +728,30 @@ header .navbar {
 }
 
 .services .slick-slide {
-  padding-right: 37px;
+  /* margin-right: 37px; */
   padding-bottom: 30px;
+}
+
+.services .slick-slide .service-item-main {
+  padding: 0px 18.5px;
+}
+
+.services .slick-list {
+  /* margin-left: -18.5px; */
+  /* margin-right: -37px; */
+  width: 100%;
+}
+
+.projects .slick-list {
+  /* margin-right: -19px; */
+}
+
+.slick-list {
+  width: 100%;
+}
+
+.services ul.slick-dots {
+  bottom: -30px !important;
 }
 
 .arrow-item {
@@ -840,8 +869,13 @@ header .navbar {
   margin-bottom: 13px;
 }
 
+.projects .project-item-main {
+  padding: 0px 18px;
+}
+
 .projects .project-item img {
-  width: 244px;
+  /* max-width: 244px; */
+  width: 100%;
   height: 253px;
   background: #3a3a3a;
   border-radius: 14px;
@@ -890,6 +924,7 @@ header .navbar {
 
 .projects ul.slick-dots,
 .partners ul.slick-dots,
+.services ul.slick-dots,
 .testimonials ul.slick-dots {
   display: flex !important;
   justify-content: center;
@@ -1443,12 +1478,14 @@ header .navbar {
   background: #ffffff;
   box-shadow: 8.7538px 8.7538px 11.937px rgba(161, 193, 57, 0.15);
   border-radius: 11.937px;
-  width: 194.97px;
-  height: 167.91px;
+  /* max-width: 194.97px; */
+  width: 100%;
+  max-height: 167.91px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 15px 0px;
   /* transform: matrix(-1, 0, 0, 1, 0, 0); */
 }
 
@@ -1456,17 +1493,19 @@ header .navbar {
   padding-bottom: 20px;
 }
 
-.partners .slick-slide {
-  padding-right: 31px;
+.partners .slick-slide .partner-item-main {
+  padding: 0px 15.5px;
 }
 
 .partners .slick-dots button,
+.services .slick-dots button,
 .testimonials .slick-dots button {
   color: #000000;
   background: rgba(164, 198, 57, 0.3) !important;
 }
 
 .partners ul.slick-dots li.slick-active button,
+.services ul.slick-dots li.slick-active button,
 .testimonials ul.slick-dots li.slick-active button {
   background: var(--color-primary) !important;
 }
@@ -1682,6 +1721,11 @@ footer h4 {
   font-weight: 600;
   letter-spacing: 0.25px;
   margin-bottom: 35px;
+}
+footer img {
+  margin-bottom: 20px;
+  width: 135.24px;
+  height: 44.2px;
 }
 footer p {
   color: #fff;
@@ -2106,6 +2150,7 @@ footer .contact-form button.filled-button:hover {
 .blogs {
   margin-top: 80px;
   margin-bottom: 50px;
+  overflow: hidden;
 }
 
 .blogs .list-tab {
@@ -2299,6 +2344,7 @@ footer .contact-form button.filled-button:hover {
     margin-bottom: 30px;
     padding-bottom: 30px;
   }
+
   footer .last-item {
     border-bottom: none;
   }

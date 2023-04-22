@@ -118,6 +118,8 @@ jQuery(document).ready(function ($) {
     slidesToScroll: 1,
     pauseOnHover: false,
     pauseOnDotsHover: true,
+    dots: true,
+    padding: 37,
     cssEase: 'linear',
     draggable: false,
     prevArrow:
@@ -133,7 +135,7 @@ jQuery(document).ready(function ($) {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 900,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -175,7 +177,7 @@ jQuery(document).ready(function ($) {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 760,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -210,19 +212,26 @@ jQuery(document).ready(function ($) {
       {
         breakpoint: 1024,
         settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 560,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 360,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
