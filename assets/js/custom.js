@@ -306,4 +306,9 @@ jQuery(document).ready(function ($) {
       });
     }
   });
+
+  // blog
+  $(function () {
+    $('.list-tab ul').draggable({ axis: 'x' });
+  });
 });
