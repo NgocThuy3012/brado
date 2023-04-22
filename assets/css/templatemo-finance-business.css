@@ -2429,6 +2429,15 @@ footer .contact-form button.filled-button:hover {
   .contact-item {
     margin-bottom: 30px;
   }
+  .blogs .pagination ul {
+    gap: 10px;
+  }
+
+  .blogs .pagination .pagination-item {
+    width: 30px;
+    height: 30px;
+    font-size: 12spx;
+  }
 }
 
 @media (max-width: 992px) {
